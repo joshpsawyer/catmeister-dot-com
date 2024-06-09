@@ -7,7 +7,8 @@ last_modified: 2024-06-09
 
 **CATMEISTER** is:
 
-- a place for written tutorials & techniques because there's too many bad vids
+- a place for written tutorials & techniques because there's I cannot retain
+    knowledge from a video for the life of me
 - some experiments and ascii art
 - copyright &copy; 2024
 
