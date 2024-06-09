@@ -1,1 +1,181 @@
+@font-face {
+  font-family: "Kenney Pixel Square";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/kenney_pixel_square-webfont.woff") format("woff"), url("/assets/fonts/kenney_pixel_square-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Kenney Pixel";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/kenney_pixel-webfont.woff") format("woff"), url("/assets/fonts/kenney_pixel-webfont.woff2") format("woff2");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: "fixedsys";
+  src: url("/assets/fonts/fsex300-webfont.eot");
+  src: url("/assets/fonts/fsex300-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/fsex300-webfont.woff") format("woff"), url("/assets/fonts/fsex300-webfont.ttf") format("truetype"), url("/assets/fonts/fsex300-webfont.svg#fixedsys") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-smooth: never;
+}
+:root {
+  --site-width: 45rem;
+  --color-one: #902923;
+  --color-background: #ffd252;
+  --color-three: #631C18;
+  --color-font: #000;
+}
 
+body {
+  font-family: "Courier", "Courier Prime", "Courier New", sans-serif;
+  font-display: swap;
+  font-size: 16px;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: scroll;
+  margin: 0 auto;
+  color: var(--color-font);
+  cursor: url("/assets/images/cursor-pointer.png") 12 0, auto;
+}
+body .color-scheme-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-font);
+}
+
+#nav-wrapper #site-logo-text {
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: var(--site-width);
+}
+#nav-wrapper #site-logo-text a {
+  text-decoration: none;
+}
+#nav-wrapper nav {
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: var(--site-width);
+}
+#nav-wrapper nav a {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+#main-wrapper main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: var(--site-width);
+}
+
+#footer-wrapper {
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+}
+#footer-wrapper footer {
+  margin: 0 auto;
+  max-width: var(--site-width);
+  color: lightgray;
+  padding: 2rem 1rem;
+}
+#footer-wrapper footer a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.3rem;
+}
+
+a {
+  outline: 0;
+  cursor: url("/assets/images/cursor-hand.png") 12 0, auto;
+  color: var(--color-one);
+}
+
+a:hover {
+  color: var(--color-three);
+}
+
+/* Headings */
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.571em;
+} /* 22px */
+h3 {
+  font-size: 1.429em;
+} /* 20px */
+h4 {
+  font-size: 1.286em;
+} /* 18px */
+h5 {
+  font-size: 1.143em;
+} /* 16px */
+h6 {
+  font-size: 1em;
+} /* 14px */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+}
+
+#index-nav nav {
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+  text-align: center;
+  font-size: 2rem;
+}
+#index-nav nav a {
+  display: block;
+  padding: 1rem 2rem;
+  border: 3px dashed #000;
+  text-decoration: none;
+  grid-column: span 3;
+}
+#index-nav nav a:hover {
+  background-color: var(--color-three);
+  color: var(--color-background);
+  border: 3px dashed #CB9D06;
+}
+
+img#article-hero {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+img.recipeimage {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+code {
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+}
+
+#date_created, #date_modified {
+  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
+}
+
+ol, ul {
+  line-height: 1.5rem;
+}
