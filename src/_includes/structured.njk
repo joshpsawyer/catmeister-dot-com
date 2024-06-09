@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+
+<article>
+    <h1>{{ title }}</h1>
+    {% if hero %}
+    <img id="article-hero" src="{{ hero }}" alt="{{ heroalt }}" />
+    {% endif %}
+    {{ content | safe}}
+
+    {% if structures|length %}
+        {% for structure in structures %}
+            <section>
+                {% if structure.display_heading %}
+                    <h2>{{ structure.heading }}</h2>
+                {% endif %}
+                {% if structure.type == "ingredients" %}
+                    {% include "partials/structure-ingredients.njk" %}
+                {% elif structure.type == "instructions" %}
+                    {% include "partials/structure-instructions.njk" %}
+                {% elif structure.type == "ordered_list" %}
+                    {% include "partials/structure-olist.njk" %}
+                {% elif structure.type == "references" %}
+                    {% include "partials/structure-references.njk" %}
+                {% endif %}
+            </section>
+        {% endfor %}
+    {% endif %}
+    <span id="date_created">Created: {{ published | htmlDateString }}</span><br/>
+    {% if last_modified %}
+    <br/>
+    <span id="date_modified">Last Modified: {{ last_modified | htmlDateString }}</span>
+    {% endif %}
+</article>

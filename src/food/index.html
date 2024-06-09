@@ -1,0 +1,17 @@
+---
+title: Food
+layout: base
+collections: ["foods"]
+
+---
+
+<h1>Food</h1>
+
+<ul>
+{% assign sortedFoods = collections.foods | sortByTitle%}
+{% for food in sortedFoods %}
+    <li>
+        <a href="{{ food.url }}">{{ food.data.indexname }}</a>
+    </li>
+{% endfor %}
+</ul>

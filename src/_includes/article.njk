@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+
+<article>
+    <h1>{{ title }}</h1>
+    {% if hero %}
+    <img id="article-hero" src="{{ hero }}" alt="{{ heroalt }}" />
+    {% endif %}
+    {{ content | safe}}
+    <span id="date_created">Created: {{ published | htmlDateString }}</span><br/>
+    {% if last_modified %}
+    <br/>
+    <span id="date_modified">Last Modified: {{ last_modified | htmlDateString }}</span>
+    {% endif %}
+
+</article>

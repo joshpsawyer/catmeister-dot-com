@@ -1,0 +1,26 @@
+{% include "partials/head.njk" %}
+<body>
+  <!-- <input id="color-mode" type="checkbox" name="color-mode">
+   <label for="color-mode">
+    <span class="dark-mode-hide">Dark Mode</span>
+    <span class="light-mode-hide">Light Mode</span>
+  </label> -->
+  <div class="color-scheme-wrapper">
+    <div id="nav-wrapper">
+      <div id="site-logo-text"><a href="/">(=◉ᆽ◉=)</a></div>
+    </div>
+    <div id="main-wrapper">
+      <main>
+        {{ content | safe }}
+      </main>
+    </div>
+    <div id="footer-wrapper">
+      <footer>
+        <a href="/colophon/">
+          <:3)~
+        </a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
