@@ -1,4 +1,7 @@
 const { DateTime } = require("luxon");
+const markdownIt = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
+
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/CNAME");
@@ -36,6 +39,23 @@ module.exports = function (eleventyConfig) {
       return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
   
+    let markdownLibrary = markdownIt({
+      html: true,
+      // breaks: true,
+      linkify: true,
+      // typographer: true,
+    })
+      .use(markdownItFootnote);
+  
+   markdownLibrary.renderer.rules.footnote_block_open = () => (
+    '<h2 class="mt-3">References</h4>\n' +
+    '<section class="footnotes">\n' +
+    '<ol class="footnotes-list">\n'
+  );
+  
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
+
     // eleventyConfig.addFilter("log", (obj) => {
     //   console.log(obj);
     // });
