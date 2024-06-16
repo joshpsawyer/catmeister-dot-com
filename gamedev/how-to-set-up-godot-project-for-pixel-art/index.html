@@ -12,10 +12,10 @@
     <meta property="og:description" content="gamedev and regdev and otherdev and gis and 2d art and some other stuff, too! tutorials and gamefreak codes">
   
   
-    <meta property="og:image" content="/images/food/one-two-eight-tea.png">
+    <meta property="og:image" content="/assets/images/catmeister.png">
   
-  <link rel="stylesheet" href="/css/style.css?v=1718471413" type="text/css" />
-  <link rel="stylesheet" href="/css/print.css?v=1718471413" type="text/css" media="print" />
+  <link rel="stylesheet" href="/css/style.css?v=1718540101" type="text/css" />
+  <link rel="stylesheet" href="/css/print.css?v=1718540101" type="text/css" media="print" />
   <link href="/assets/images/faviconv2.ico" rel="icon" type="image/x-icon">
   <title>How I Set Up a Godot 4.2 Project for Pixel Art - catmeister-er-er-er-er</title>
 </head>
@@ -37,11 +37,19 @@
 <article>
     <h1>How I Set Up a Godot 4.2 Project for Pixel Art</h1>
     
-    <img id="article-hero" src="/images/food/one-two-eight-tea.png" alt="two lemons and a jar of raw clover honey" />
-    
-    <p>Gamedev gamedev gamedev gamedv</p>
+    <p>Navigate to <code>Project &gt; Project Settings</code> and then choose <code>Window</code> under <code>Display</code>.
+Set <code>Viewport Width</code> to <code>480</code> and <code>Viewport Height</code> to 270. This is the resolution the game renders at.
+If you're not sure which resolution you should choose, read <a href="/2d-art/pixel-art/what-resolution-to-use-for-pixel-art">What Resolution To Use for Pixel Art</a>.</p>
+<p><img src="/images/gamedev/set-up-pixel-art-project.png" alt=""></p>
+<p>This will render a small 480x270 window which you need to stretch out after every run of the game, so set <code>Window Width Override</code> to <code>1280</code> and <code>Window Height Override</code> to 720 (or whatever's appropriate for your display).</p>
+<p><img src="/images/gamedev/window-settings.png" alt=""></p>
+<p>Finally, scroll down to the <code>Stretch</code> subheading. Set mode to <code>Viewport</code> - you're
+stretching the entire viewport out. Set <code>Scale Mode</code> to Integer - this will prevent
+sub-pixel stretching, e.g. you won't stretch your pixels 2.5 times and end up with
+some interpolation garbage.</p>
+<p><img src="/images/gamedev/godot-stretch-settings.png" alt=""></p>
 
-    <span id="date_created">Created: 2024-06-15</span><br/>
+    <span id="date_created">Created: 2024-06-16</span><br/>
     
 
 </article>

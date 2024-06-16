@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noimageai" />
+  <meta name="robots" content="noai" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="What Resolution To Use for Pixel Art - catmeister-er-er-er-er">
+  
+    <meta name="description" content="gamedev and regdev and otherdev and gis and 2d art and some other stuff, too! tutorials and gamefreak codes">
+    <meta property="og:description" content="gamedev and regdev and otherdev and gis and 2d art and some other stuff, too! tutorials and gamefreak codes">
+  
+  
+    <meta property="og:image" content="/assets/images/catmeister.png">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1718540101" type="text/css" />
+  <link rel="stylesheet" href="/css/print.css?v=1718540101" type="text/css" media="print" />
+  <link href="/assets/images/faviconv2.ico" rel="icon" type="image/x-icon">
+  <title>What Resolution To Use for Pixel Art - catmeister-er-er-er-er</title>
+</head>
+
+
+<body>
+  <!-- <input id="color-mode" type="checkbox" name="color-mode">
+   <label for="color-mode">
+    <span class="dark-mode-hide">Dark Mode</span>
+    <span class="light-mode-hide">Light Mode</span>
+  </label> -->
+  <div class="color-scheme-wrapper">
+    <div id="nav-wrapper">
+      <div id="site-logo-text"><a href="/">(=◉ᆽ◉=)</a></div>
+    </div>
+    <div id="main-wrapper">
+      <main>
+        
+<article>
+    <h1>What Resolution To Use for Pixel Art</h1>
+    
+    <p>I'm by no means an expert, but here are the considerations I made when choosing what
+resolution to work with.</p>
+<h2>What did other games do?</h2>
+<ul>
+<li><em>Hyper Light Drifter</em> renders to a <code>480 x 270</code> which is scaled up to the resolution of your display. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li><em>Eastward</em> appears to be <code>480 x 270</code>. <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> (I know, I know, Reddit)</li>
+</ul>
+<h2>Are you emulating an old system?</h2>
+<ul>
+<li>SNES has a resolution of <code>256 x 224</code>. <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li>
+</ul>
+<h2>Scaling up to HD</h2>
+<p>This one's simple - if you maintain a 16:9 aspect ratio and your resolution width
+and height cleanly divide into <code>1920 x 1080</code>, you can scale to HD trivially. Consider <code>480 x 270</code>. We've got:</p>
+<ul>
+<li><code>1920 / 480 = 4</code></li>
+<li><code>1080 / 270 = 4</code></li>
+</ul>
+<p>so you can scale your media x4 to fill the screen. If your ratio isn't 16:9, you can
+still fill the screen with either vertical or horizontal black bars to make up the difference.</p>
+<p>If your resolution <em>does not</em> allow for integer scaling to HD, you might consider the following:</p>
+<ol>
+<li>Scale up using the largest integer you can that does not create an image beyond 1920 x 1080, then pad with black bars.</li>
+<li>Scale <em>just the art</em> up cleanly with an integer, but keep the view constrained. I don't currently know how to do this.</li>
+</ol>
+<p>But what about 4K TVs and monitors? fuck 'em</p>
+<h2>Are you going to print it?</h2>
+<p>This one's trickier, but it helps to think about what you want to achieve.
+You want to reverse into your image size, if you can, or you'll need to crop or
+edit the finished image. Generally, you want to scale your image up before you
+sent it to the printer, because the algorithm used by the printer will not always
+result in crisp edges.</p>
+<ol>
+<li>How big will your printed material be? Is it a post card, a letter, a poster?</li>
+<li>Will you print full bleed (artwork to the edges, no margin) or will you have a margin?</li>
+<li>What printer resolution (dots per inch) are you printing at? 300 DPI is common.</li>
+</ol>
+<p>If you're printing an SNES sized image at 300 DPI and, your entire image will be less than an inch!</p>
+<h2>What I use</h2>
+<p>The real reason I wrote this article - so I don't have to think about it every
+time that I take a break from doing low res or pixel art. Just use <code>480 x 270</code>!
+How can I pretend that I know better than the devs behind Eastward or Hyper Light Drifter?</p>
+<h2 class="mt-3">References</h4>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://nightmargin.tumblr.com/post/102886823891/on-resolution">https://nightmargin.tumblr.com/post/102886823891/on-resolution</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://www.reddit.com/r/PixelArt/comments/p5k9g1/what_is_the_pixel_resolution_of_eastward/">https://www.reddit.com/r/PixelArt/comments/p5k9g1/what_is_the_pixel_resolution_of_eastward/</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://blog.unity.com/games/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-16-bit-games">https://blog.unity.com/games/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-16-bit-games</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+    <span id="date_created">Created: 2024-06-15</span><br/>
+    
+
+</article>
+      </main>
+    </div>
+    <div id="footer-wrapper">
+      <footer>
+        <div><nav>
+    <a href="/2d-art/">2d</a>
+    <a href="/gamedev/">gamedev</a>
+    <a href="/">otherdev</a>
+    <a href="/">gis</a>
+    <a href="/">other</a>
+    <a href="/links/">links</a>
+</nav>
+</div>
+        <br/><a href="/colophon/">
+          <:3)~
+        </a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
