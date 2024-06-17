@@ -14,8 +14,8 @@
   
     <meta property="og:image" content="/assets/images/catmeister.png">
   
-  <link rel="stylesheet" href="/css/style.css?v=1718545689" type="text/css" />
-  <link rel="stylesheet" href="/css/print.css?v=1718545689" type="text/css" media="print" />
+  <link rel="stylesheet" href="/css/style.css?v=1718630814" type="text/css" />
+  <link rel="stylesheet" href="/css/print.css?v=1718630814" type="text/css" media="print" />
   <link
   href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
   rel="stylesheet"
@@ -47,11 +47,14 @@ If you're not sure which resolution you should choose, read <a href="/2d-art/pix
 <p><img src="/images/gamedev/set-up-pixel-art-project.png" alt=""></p>
 <p>This will render a small 480x270 window which you need to stretch out after every run of the game, so set <code>Window Width Override</code> to <code>1280</code> and <code>Window Height Override</code> to 720 (or whatever's appropriate for your display).</p>
 <p><img src="/images/gamedev/window-settings.png" alt=""></p>
-<p>Finally, scroll down to the <code>Stretch</code> subheading. Set mode to <code>Viewport</code> - you're
+<p>Scroll down to the <code>Stretch</code> subheading. Set mode to <code>Viewport</code> - you're
 stretching the entire viewport out. Set <code>Scale Mode</code> to Integer - this will prevent
 sub-pixel stretching, e.g. you won't stretch your pixels 2.5 times and end up with
-some interpolation garbage.</p>
+some interpolated garbage.</p>
 <p><img src="/images/gamedev/godot-stretch-settings.png" alt=""></p>
+<p>Choose <code>Textures</code> under <code>Rendering</code> (left nav of project settings). Set <code>Default Texture Filter</code> to <code>Nearest</code> (ensures pixel art remains crisp).</p>
+<p><img src="/images/gamedev/godot-linear-settings.png" alt=""></p>
+<p>That should be it!</p>
 
     <span id="date_created">Created: 2024-06-16</span><br/>
     
