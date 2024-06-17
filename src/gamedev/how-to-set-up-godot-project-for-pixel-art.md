@@ -20,9 +20,15 @@ This will render a small 480x270 window which you need to stretch out after ever
 
 ![](/images/gamedev/window-settings.png)
 
-Finally, scroll down to the `Stretch` subheading. Set mode to `Viewport` - you're
+Scroll down to the `Stretch` subheading. Set mode to `Viewport` - you're
 stretching the entire viewport out. Set `Scale Mode` to Integer - this will prevent
 sub-pixel stretching, e.g. you won't stretch your pixels 2.5 times and end up with
-some interpolation garbage.
+some interpolated garbage.
 
 ![](/images/gamedev/godot-stretch-settings.png)
+
+Choose `Textures` under `Rendering` (left nav of project settings). Set `Default Texture Filter` to `Nearest` (ensures pixel art remains crisp).
+
+![](/images/gamedev/godot-linear-settings.png)
+
+That should be it!
