@@ -174,10 +174,6 @@ article img {
   height: auto;
 }
 
-code {
-  font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
-}
-
 #date_created, #date_modified {
   font-family: "fixedsys", "Courier Prime", "Courier New", sans-serif;
 }
