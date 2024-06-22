@@ -48,7 +48,7 @@ module.exports = function (eleventyConfig) {
       .use(markdownItFootnote);
   
    markdownLibrary.renderer.rules.footnote_block_open = () => (
-    '<h2 class="mt-3">References</h4>\n' +
+    '<h2 class="mt-3">References & Notes</h4>\n' +
     '<section class="footnotes">\n' +
     '<ol class="footnotes-list">\n'
   );
