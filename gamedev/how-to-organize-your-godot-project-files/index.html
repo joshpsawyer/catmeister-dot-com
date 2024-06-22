@@ -14,8 +14,8 @@
   
     <meta property="og:image" content="/assets/images/catmeister.png">
   
-  <link rel="stylesheet" href="/css/style.css?v=1718644189" type="text/css" />
-  <link rel="stylesheet" href="/css/print.css?v=1718644189" type="text/css" media="print" />
+  <link rel="stylesheet" href="/css/style.css?v=1719075642" type="text/css" />
+  <link rel="stylesheet" href="/css/print.css?v=1719075642" type="text/css" media="print" />
   <link
   href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
   rel="stylesheet"
@@ -42,21 +42,18 @@
     <h1>How to Organize Your Godot Project Files</h1>
     
     <h2>Coming From Unity</h2>
-<p>In Unity, I let the root project directory be a wild west of stuff because
-importing things from the store, I could never be certain out files would be
+<p>In Unity, I let the root project directory be a wild west of stuff because, when
+importing things from the store, I could never be certain how files would be
 structured. I adopted having one organized folder called <code>__Project</code> which I
-kept <em>extremely</em> organized. All the art had a folder; prefabs had a folder;
-ScriptableObjects had a folder; animation had a folder. It kind of worked, but
-organizing by type meant also meant a lot of file juggling to make sure things
-were in the right place... and it was an arbitrary rule I had copied from
-somebody else's work.</p>
-<h2>Two Root Folders</h2>
+kept pretty organized. All the art had a folder; prefabs had a folder;
+ScriptableObjects had a folder; animation had a folder, etc. etc.</p>
+<h2>The Root Folders</h2>
 <p>In data analysis programming, I got into the habit of having a folder for raw
 input data that I wouldn't touch, a folder for scripts to operate on the data,
 and a folder for results. I've adopted a similar approach in Godot after
 reviewing some articles on data organization. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
 <ul>
-<li>a root level folder called <code>assets</code> will contain the 'raw' data - that includes:
+<li>an <code>assets</code> folder will contain the 'raw'<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> data - that includes:
 <ul>
 <li>audio files, organized into an <code>audio</code> folder</li>
 <li>aseprite files, organized into an <code>aseprite</code> folder</li>
@@ -65,15 +62,26 @@ reviewing some articles on data organization. <sup class="footnote-ref"><a href=
 </ul>
 </li>
 </ul>
-<p>each asset <em>type</em> folder is then organized by scene ('prefab' if this were unity).</p>
 <ul>
-<li>a root level folder called <code>scenes</code> will contain the constructed data
+<li>
+<p>a <code>scenes</code> folder will contains all the scenes we've made</p>
 <ul>
-<li><em>every</em> scene gets its own subfolder in which it is saved.</li>
-<li>the scripts for a scene live alongside the scene.</li>
-<li>if the subnodes of a scene get complicated, they get their own folders too.</li>
-<li>if the scenes have categories - characters, objects, etc. - they might get categorized by their type</li>
+<li>scenes are loosely categorized, e.g.:
+<ul>
+<li><code>characters</code> contains characters</li>
+<li><code>levels</code> contains levels</li>
+<li><code>effects</code> contains effects (e.g. a reusable explosion)</li>
 </ul>
+</li>
+<li>code lives <em>with</em> the scene</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>a <code>src</code> folder which contains auto-load scripts or scripts that are not part of scenes, e.g. resource scripts</p>
+</li>
+<li>
+<p>a <code>resources</code> folder which contains all the resources for the project</p>
 </li>
 </ul>
 <p><em>theoretically</em>, if I was working with a team, then the people producing audio would only be concerned
@@ -85,25 +93,32 @@ in their respective <code>/characters/bob/</code> folders.</p>
 <p>I've got assets for a character named Squash. I've got some sound effects, some
 running and walking and idling animations, and I'm making a scene for him. He'll be used
 in a game consisting of one world scene. My project structure will look like:</p>
-<pre class="language-bash"><code class="language-bash">/assets/audio/character/squash/fart.wav
-/assets/audio/character/squash/hello.wav
-/assets/music/character/squash/squash_theme.wav
-/assets/sprites/character/squash/squash_walk.png
-/assets/sprites/character/squash/squash_run.png
-/assets/sprites/character/squash/squash_idle.png
-/assets/aseprite/character/squash/squash.aseprite
-/scenes/character/squash/squash.tscn
-/scenes/character/squash/squash.gd</code></pre>
+<pre class="language-bash"><code class="language-bash">/assets/audio/characters/squash/fart.wav
+/assets/audio/characters/squash/hello.wav
+/assets/music/characters/squash/squash_theme.wav
+/assets/sprites/characters/squash/squash_walk.png
+/assets/sprites/characters/squash/squash_run.png
+/assets/sprites/characters/squash/squash_idle.png
+/assets/aseprite/characters/squash/squash.aseprite
+/scenes/characters/squash/squash.tscn
+/scenes/characters/squash/squash.gd</code></pre>
 <p>it's maybe redundant to have the sprites and the aseprite files in there - there are aseprite importers
 that you can use to set up the animations from the raw aseprite data like <a href="https://github.com/nklbdev/godot-4-importality">importality</a>.</p>
 <h2>WARNING WARNING</h2>
-<p><strong>DO NOT</strong> move files around outside of Godot! It WILL BREAK STUFF.</p>
-<h2 class="mt-3">References</h4>
+<p><strong>DO NOT</strong> move files around outside of Godot! It WILL BREAK STUFF. Even
+sometimes moving them within Godot breaks stuff - try to run your project after
+you move things and see what errors pop up. Get your structure in place early so
+you don't risk breaking things.</p>
+<h2 class="mt-3">References & Notes</h4>
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p><a href="https://new.pythonforengineers.com/blog/how-to-structure-your-godot-project-so-you-dont-get-confused/">How To Structure Your Godot Project (so You Don't Get Confused)</a>, accessed 2024-06-16 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn2" class="footnote-item"><p><a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/project_organization.html">Project organization Official Godot Documentation for 4.2</a>, accessed 2024-06-16 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>In reality, this data <em>will</em> be changed - you'll update your art, your music,
+all sorts of things as your project evolves, but I consider it apart from the game
+insofar that you're not editing it <em>within</em> the game engine. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
