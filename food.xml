@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>catmeister - food &amp; recipes</title>
+  <subtitle>All the food &amp; recipe posts from catmeister.com.</subtitle>
+  <link href="https://www.catmeister.com/food.xml" rel="self" />
+  <link href="https://www.catmeister.com/" />
+  <updated>2025-03-06T23:39:18Z</updated>
+  <id>https://www.catmeister.com/</id>
+  <author>
+    <name>catmeister</name>
+  </author>
+  <entry>
+    <title>1-2-8 Honey Lemon Tea</title>
+    <link href="https://www.catmeister.com/food/drinks/one-two-eight-honey-lemon-tea/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/food/drinks/one-two-eight-honey-lemon-tea/</id>
+    <content type="html">&lt;p&gt;Whenever somebody&#39;s sick, they get this tea. You can make it to taste, but I always
+use this ratio because there&#39;s a song called 1-2-8. This stuff tastes... great!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Gortimer&#39;s Jelly Graham Cracker Sandwich... That&#39;s Quick!</title>
+    <link href="https://www.catmeister.com/food/dessert/jelly-graham-cracker-sandwich/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/food/dessert/jelly-graham-cracker-sandwich/</id>
+    <content type="html">&lt;p&gt;Gortimer made themselves a snack and wanted me to &#39;put it online for everybody to read.&#39;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Overnight Holiday Cinnamon Rolls</title>
+    <link href="https://www.catmeister.com/food/dessert/cinnamon-rolls/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/food/dessert/cinnamon-rolls/</id>
+    <content type="html">&lt;p&gt;At my parents bakery, they sold cinnamon rolls. We had both a commercially prepared one and we made them in house, usually
+in the off-season, when we had time to experiment. These aren&#39;t those, but they are pretty good. The icing comes from
+Leif Enger&#39;s &lt;em&gt;Peace Like A River&lt;/em&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Great Old Fashioned Pancakes</title>
+    <link href="https://www.catmeister.com/food/breakfast/pancakes/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/food/breakfast/pancakes/</id>
+    <content type="html">&lt;p&gt;These pancakes were a slow evolution over a year from an allrecipes recipe for
+&#39;good old fashioned pancakes.&#39; And they were good, but &lt;em&gt;now&lt;/em&gt; they&#39;re great.
+Any changes I&#39;ve tried recently have made them worse, not better, so I&#39;m letting
+them be and releasing this recipe into the wild.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

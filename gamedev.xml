@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>catmeister - posts about gamedev</title>
+  <subtitle>All the game development from catmeister.com.</subtitle>
+  <link href="https://www.catmeister.com/gamedev.xml" rel="self" />
+  <link href="https://www.catmeister.com/" />
+  <updated>2025-03-06T23:39:18Z</updated>
+  <id>https://www.catmeister.com/</id>
+  <author>
+    <name>catmeister</name>
+  </author>
+  <entry>
+    <title>How I Set Up a Godot 4.2 Project for Pixel Art</title>
+    <link href="https://www.catmeister.com/gamedev/how-to-set-up-godot-project-for-a-pixel-art-game/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/gamedev/how-to-set-up-godot-project-for-a-pixel-art-game/</id>
+    <content type="html">&lt;p&gt;Navigate to &lt;code&gt;Project &amp;gt; Project Settings&lt;/code&gt; and then choose &lt;code&gt;Window&lt;/code&gt; under &lt;code&gt;Display&lt;/code&gt;.
+Set &lt;code&gt;Viewport Width&lt;/code&gt; to &lt;code&gt;480&lt;/code&gt; and &lt;code&gt;Viewport Height&lt;/code&gt; to 270. This is the resolution the game renders at.
+If you&#39;re not sure which resolution you should choose, read &lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art&quot;&gt;What Resolution To Use for Pixel Art&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.catmeister.com/images/gamedev/set-up-pixel-art-project.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This will render a small 480x270 window which you need to stretch out after every run of the game, so set &lt;code&gt;Window Width Override&lt;/code&gt; to &lt;code&gt;1280&lt;/code&gt; and &lt;code&gt;Window Height Override&lt;/code&gt; to 720 (or whatever&#39;s appropriate for your display).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.catmeister.com/images/gamedev/window-settings.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Scroll down to the &lt;code&gt;Stretch&lt;/code&gt; subheading. Set mode to &lt;code&gt;Viewport&lt;/code&gt; - you&#39;re
+stretching the entire viewport out. Set &lt;code&gt;Scale Mode&lt;/code&gt; to Integer - this will prevent
+sub-pixel stretching, e.g. you won&#39;t stretch your pixels 2.5 times and end up with
+some interpolated garbage.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.catmeister.com/images/gamedev/godot-stretch-settings.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Choose &lt;code&gt;Textures&lt;/code&gt; under &lt;code&gt;Rendering&lt;/code&gt; (left nav of project settings). Set &lt;code&gt;Default Texture Filter&lt;/code&gt; to &lt;code&gt;Nearest&lt;/code&gt; (ensures pixel art remains crisp).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.catmeister.com/images/gamedev/godot-linear-settings.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;That should be it!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>How to Organize Your Godot Project Files</title>
+    <link href="https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/</id>
+    <content type="html">&lt;h2&gt;Coming From Unity&lt;/h2&gt;
+&lt;p&gt;In Unity, I let the root project directory be a wild west of stuff because, when
+importing things from the store, I could never be certain how files would be
+structured. I adopted having one organized folder called &lt;code&gt;__Project&lt;/code&gt; which I
+kept pretty organized. All the art had a folder; prefabs had a folder;
+ScriptableObjects had a folder; animation had a folder, etc. etc.&lt;/p&gt;
+&lt;h2&gt;The Root Folders&lt;/h2&gt;
+&lt;p&gt;In data analysis programming, I got into the habit of having a folder for raw
+input data that I wouldn&#39;t touch, a folder for scripts to operate on the data,
+and a folder for results. I&#39;ve adopted a similar approach in Godot after
+reviewing some articles on data organization. &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fn2&quot; id=&quot;fnref2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt; &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fn3&quot; id=&quot;fnref3&quot;&gt;[3]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;an &lt;code&gt;assets&lt;/code&gt; folder will contain the &#39;raw&#39;&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fn4&quot; id=&quot;fnref4&quot;&gt;[4]&lt;/a&gt;&lt;/sup&gt; data - that includes:
+&lt;ul&gt;
+&lt;li&gt;audio files, organized into an &lt;code&gt;audio&lt;/code&gt; folder&lt;/li&gt;
+&lt;li&gt;aseprite files, organized into an &lt;code&gt;aseprite&lt;/code&gt; folder&lt;/li&gt;
+&lt;li&gt;sprite files, organized into a &lt;code&gt;sprites&lt;/code&gt; folder&lt;/li&gt;
+&lt;li&gt;music files, organized into a &lt;code&gt;music&lt;/code&gt; folder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a &lt;code&gt;scenes&lt;/code&gt; folder will contains all the scenes we&#39;ve made&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scenes are loosely categorized, e.g.:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;characters&lt;/code&gt; contains characters&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;levels&lt;/code&gt; contains levels&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;effects&lt;/code&gt; contains effects (e.g. a reusable explosion)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;code lives &lt;em&gt;with&lt;/em&gt; the scene, except for the code that doesn&#39;t have scenes which goes into...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a &lt;code&gt;src&lt;/code&gt; folder which contains auto-load scripts or scripts that are not part of scenes, e.g. resource scripts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a &lt;code&gt;resources&lt;/code&gt; folder which contains all the resources for the project&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;theoretically&lt;/em&gt;, if I was working with a team, then the people producing audio would only be concerned
+with whats in the audio subfolder; similar to music, similar to aseprite. &lt;em&gt;inside&lt;/em&gt; each type folder, the hierarchy of
+the scenes folder is mirrored. if you&#39;ve got a scene in &lt;code&gt;/scenes/characters/bob/&lt;/code&gt; then all its assets will be organized by type
+in their respective &lt;code&gt;/characters/bob/&lt;/code&gt; folders.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;all files are named with snake case&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;An Example&lt;/h2&gt;
+&lt;p&gt;I&#39;ve got assets for a character named Squash. I&#39;ve got some sound effects, some
+running and walking and idling animations, and I&#39;m making a scene for him. He&#39;ll be used
+in a game consisting of one world scene. My project structure will look like:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;/assets/audio/characters/squash/fart.wav
+/assets/audio/characters/squash/hello.wav
+/assets/music/characters/squash/squash_theme.wav
+/assets/sprites/characters/squash/squash_walk.png
+/assets/sprites/characters/squash/squash_run.png
+/assets/sprites/characters/squash/squash_idle.png
+/assets/aseprite/characters/squash/squash.aseprite
+/scenes/characters/squash/squash.tscn
+/scenes/characters/squash/squash.gd&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;it&#39;s maybe redundant to have the sprites and the aseprite files in there - there are aseprite importers
+that you can use to set up the animations from the raw aseprite data like &lt;a href=&quot;https://github.com/nklbdev/godot-4-importality&quot;&gt;importality&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;WARNING WARNING&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;DO NOT&lt;/strong&gt; move files around outside of Godot! It WILL BREAK STUFF. Even
+sometimes moving them within Godot breaks stuff - try to run your project after
+you move things and see what errors pop up. Get your structure in place early so
+you don&#39;t risk breaking things.&lt;/p&gt;
+&lt;h2 class=&quot;mt-3&quot;&gt;References &amp; Notes
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://new.pythonforengineers.com/blog/how-to-structure-your-godot-project-so-you-dont-get-confused/&quot;&gt;How To Structure Your Godot Project (so You Don&#39;t Get Confused)&lt;/a&gt;, accessed 2024-06-16 &lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://docs.godotengine.org/en/stable/tutorials/best_practices/project_organization.html&quot;&gt;Project organization Official Godot Documentation for 4.2&lt;/a&gt;, accessed 2024-06-16 &lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fnref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IVMTxudQi48&quot;&gt;How to structure your project (So you don&#39;t get confused) - Godot tutorial&lt;/a&gt;, accessed 2024-06-22 &lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fnref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn4&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;In reality, this data &lt;em&gt;will&lt;/em&gt; be changed - you&#39;ll update your art, your music,
+all sorts of things as your project evolves, but I consider it apart from the game
+insofar that you&#39;re not editing it &lt;em&gt;within&lt;/em&gt; the game engine. &lt;a href=&quot;https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/#fnref4&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/h2&gt;</content>
+  </entry>
+  <entry>
+    <title>How to Set Camera Limits Dynamically with minimal code - Resource Based Event Architecture in Godot 4, Part 3</title>
+    <link href="https://www.catmeister.com/gamedev/how-to-dynamically-set-camera2d-limits-with-area2d-and-resource-based-events-godot-4/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/gamedev/how-to-dynamically-set-camera2d-limits-with-area2d-and-resource-based-events-godot-4/</id>
+    <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
+&lt;h2&gt;Beginner&lt;/h2&gt;
+&lt;h2&gt;Intermediate&lt;/h2&gt;
+&lt;h2&gt;Advanced&lt;/h2&gt;
+</content>
+  </entry>
+  <entry>
+    <title>How to Communicate between Distant Nodes - Resource Based Event Architechture in Godot 4, Part 2</title>
+    <link href="https://www.catmeister.com/gamedev/how-to-communicate-between-distance-nodes-with-resource-based-events-godot-4/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/gamedev/how-to-communicate-between-distance-nodes-with-resource-based-events-godot-4/</id>
+    <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
+&lt;h2&gt;Beginner&lt;/h2&gt;
+&lt;h2&gt;Intermediate&lt;/h2&gt;
+&lt;h2&gt;Advanced&lt;/h2&gt;
+</content>
+  </entry>
+  <entry>
+    <title>The Event Bus, Local Signaling and an Alternative - Resource Based Event Architechture in Godot 4, Part 1</title>
+    <link href="https://www.catmeister.com/gamedev/an-alternative-to-the-event-bus-and-why-godot-4/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/gamedev/an-alternative-to-the-event-bus-and-why-godot-4/</id>
+    <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
+&lt;h2&gt;Beginner&lt;/h2&gt;
+&lt;h2&gt;Intermediate&lt;/h2&gt;
+&lt;h2&gt;Advanced&lt;/h2&gt;
+</content>
+  </entry>
+  <entry>
+    <title>All The Good Godot Tutorials that I could Find</title>
+    <link href="https://www.catmeister.com/gamedev/all-the-good-godot-tutorials-that-i-could-find/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/gamedev/all-the-good-godot-tutorials-that-i-could-find/</id>
+    <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
+&lt;h2&gt;Beginner&lt;/h2&gt;
+&lt;h2&gt;Intermediate&lt;/h2&gt;
+&lt;h2&gt;Advanced&lt;/h2&gt;
+</content>
+  </entry>
+  <entry>
+    <title>What Resolution To Use for Pixel Art</title>
+    <link href="https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/" />
+    <updated>2025-03-06T23:39:18Z</updated>
+    <id>https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/</id>
+    <content type="html">&lt;p&gt;I&#39;m by no means an expert, but here are the considerations I made when choosing what
+resolution to work with.&lt;/p&gt;
+&lt;h2&gt;What did other games do?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Hyper Light Drifter&lt;/em&gt; renders to a &lt;code&gt;480 x 270&lt;/code&gt; which is scaled up to the resolution of your display. &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Eastward&lt;/em&gt; appears to be &lt;code&gt;480 x 270&lt;/code&gt;. &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/#fn2&quot; id=&quot;fnref2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt; (I know, I know, Reddit)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Are you emulating an old system?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SNES has a resolution of &lt;code&gt;256 x 224&lt;/code&gt;. &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/#fn3&quot; id=&quot;fnref3&quot;&gt;[3]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Scaling up to HD&lt;/h2&gt;
+&lt;p&gt;This one&#39;s simple - if you maintain a 16:9 aspect ratio and your resolution width
+and height cleanly divide into &lt;code&gt;1920 x 1080&lt;/code&gt;, you can scale to HD trivially. Consider &lt;code&gt;480 x 270&lt;/code&gt;. We&#39;ve got:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1920 / 480 = 4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1080 / 270 = 4&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;so you can scale your media x4 to fill the screen. If your ratio isn&#39;t 16:9, you can
+still fill the screen with either vertical or horizontal black bars to make up the difference.&lt;/p&gt;
+&lt;p&gt;If your resolution &lt;em&gt;does not&lt;/em&gt; allow for integer scaling to HD, you might consider the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Scale up using the largest integer you can that does not create an image beyond 1920 x 1080, then pad with black bars.&lt;/li&gt;
+&lt;li&gt;Scale &lt;em&gt;just the art&lt;/em&gt; up cleanly with an integer, but keep the view constrained. I don&#39;t currently know how to do this.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;But what about 4K TVs and monitors? fuck &#39;em&lt;/p&gt;
+&lt;h2&gt;Are you going to print it?&lt;/h2&gt;
+&lt;p&gt;This one&#39;s trickier, but it helps to think about what you want to achieve.
+You want to reverse into your image size, if you can, or you&#39;ll need to crop or
+edit the finished image. Generally, you want to scale your image up before you
+sent it to the printer, because the algorithm used by the printer will not always
+result in crisp edges.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How big will your printed material be? Is it a post card, a letter, a poster?&lt;/li&gt;
+&lt;li&gt;Will you print full bleed (artwork to the edges, no margin) or will you have a margin?&lt;/li&gt;
+&lt;li&gt;What printer resolution (dots per inch) are you printing at? 300 DPI is common.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you&#39;re printing an SNES sized image at 300 DPI and, your entire image will be less than an inch!&lt;/p&gt;
+&lt;h2&gt;What I use&lt;/h2&gt;
+&lt;p&gt;The real reason I wrote this article - so I don&#39;t have to think about it every
+time that I take a break from doing low res or pixel art. Just use &lt;code&gt;480 x 270&lt;/code&gt;!
+How can I pretend that I know better than the devs behind Eastward or Hyper Light Drifter?&lt;/p&gt;
+&lt;h2 class=&quot;mt-3&quot;&gt;References &amp; Notes
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://nightmargin.tumblr.com/post/102886823891/on-resolution&quot;&gt;https://nightmargin.tumblr.com/post/102886823891/on-resolution&lt;/a&gt; &lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/PixelArt/comments/p5k9g1/what_is_the_pixel_resolution_of_eastward/&quot;&gt;https://www.reddit.com/r/PixelArt/comments/p5k9g1/what_is_the_pixel_resolution_of_eastward/&lt;/a&gt; &lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/#fnref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://blog.unity.com/games/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-16-bit-games&quot;&gt;https://blog.unity.com/games/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-16-bit-games&lt;/a&gt; &lt;a href=&quot;https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/#fnref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/h2&gt;</content>
+  </entry>
+</feed>

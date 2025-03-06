@@ -14,8 +14,8 @@
   
     <meta property="og:image" content="/assets/images/catmeister.png">
   
-  <link rel="stylesheet" href="/css/style.css?v=1719075642" type="text/css" />
-  <link rel="stylesheet" href="/css/print.css?v=1719075642" type="text/css" media="print" />
+  <link rel="stylesheet" href="/css/style.css?v=1741304364" type="text/css" />
+  <link rel="stylesheet" href="/css/print.css?v=1741304364" type="text/css" media="print" />
   <link
   href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
   rel="stylesheet"
@@ -51,9 +51,9 @@ ScriptableObjects had a folder; animation had a folder, etc. etc.</p>
 <p>In data analysis programming, I got into the habit of having a folder for raw
 input data that I wouldn't touch, a folder for scripts to operate on the data,
 and a folder for results. I've adopted a similar approach in Godot after
-reviewing some articles on data organization. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+reviewing some articles on data organization. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
 <ul>
-<li>an <code>assets</code> folder will contain the 'raw'<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> data - that includes:
+<li>an <code>assets</code> folder will contain the 'raw'<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> data - that includes:
 <ul>
 <li>audio files, organized into an <code>audio</code> folder</li>
 <li>aseprite files, organized into an <code>aseprite</code> folder</li>
@@ -73,8 +73,7 @@ reviewing some articles on data organization. <sup class="footnote-ref"><a href=
 <li><code>effects</code> contains effects (e.g. a reusable explosion)</li>
 </ul>
 </li>
-<li>code lives <em>with</em> the scene</li>
-<li></li>
+<li>code lives <em>with</em> the scene, except for the code that doesn't have scenes which goes into...</li>
 </ul>
 </li>
 <li>
@@ -116,14 +115,19 @@ you don't risk breaking things.</p>
 </li>
 <li id="fn2" class="footnote-item"><p><a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/project_organization.html">Project organization Official Godot Documentation for 4.2</a>, accessed 2024-06-16 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn3" class="footnote-item"><p>In reality, this data <em>will</em> be changed - you'll update your art, your music,
+<li id="fn3" class="footnote-item"><p><a href="https://www.youtube.com/watch?v=IVMTxudQi48">How to structure your project (So you don't get confused) - Godot tutorial</a>, accessed 2024-06-22 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>In reality, this data <em>will</em> be changed - you'll update your art, your music,
 all sorts of things as your project evolves, but I consider it apart from the game
-insofar that you're not editing it <em>within</em> the game engine. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+insofar that you're not editing it <em>within</em> the game engine. <a href="#fnref4" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
 
     <span id="date_created">Created: 2024-06-16</span><br/>
+    
+    <br/>
+    <span id="date_modified">Last Modified: 2024-06-22</span>
     
 
 </article>
