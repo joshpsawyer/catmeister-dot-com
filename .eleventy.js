@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/CNAME");
@@ -38,6 +39,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("postDate", (dateObj) => {
       return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
+  eleventyConfig.setFreezeReservedData(false);
+
   
     let markdownLibrary = markdownIt({
       html: true,
@@ -57,15 +60,51 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
+	eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // or "rss", "json"
+		outputPath: "/food.xml",
+		collection: {
+			name: "foods", // iterate over `collections.posts`
+			limit: 0,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "catmeister - food & recipes",
+			subtitle: "All the food & recipe posts from catmeister.com.",
+			base: "https://www.catmeister.com/",
+			author: {
+				name: "catmeister",
+			}
+		}
+  });
+  
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // or "rss", "json"
+		outputPath: "/gamedev.xml",
+		collection: {
+			name: "gamedev", // iterate over `collections.posts`
+			limit: 0,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "catmeister - posts about gamedev",
+			subtitle: "All the game development from catmeister.com.",
+			base: "https://www.catmeister.com/",
+			author: {
+				name: "catmeister",
+			}
+		}
+	});
+
     // eleventyConfig.addFilter("log", (obj) => {
     //   console.log(obj);
     // });
   
-    // Return your Object options:
-    return {
-      dir: {
-        input: "src",
-        output: "_site"
-      }
+  // Return your Object options:
+  return {
+    dir: {
+      input: "src",
+      output: "_site"
     }
-  };
+  }
+};

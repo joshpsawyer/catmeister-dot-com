@@ -5,6 +5,7 @@ tags:
     - gamedev
     - godot
 published: 2024-06-16
+last_modified: 2024-06-22
 # hero: /images/food/one-two-eight-tea.png
 # heroalt: two lemons and a jar of raw clover honey
 layout: article
@@ -16,14 +17,14 @@ In Unity, I let the root project directory be a wild west of stuff because, when
 importing things from the store, I could never be certain how files would be
 structured. I adopted having one organized folder called `__Project` which I
 kept pretty organized. All the art had a folder; prefabs had a folder;
-ScriptableObjects had a folder; animation had a folder, etc. etc. 
+ScriptableObjects had a folder; animation had a folder, etc. etc.
 
 ## The Root Folders
 
 In data analysis programming, I got into the habit of having a folder for raw
 input data that I wouldn't touch, a folder for scripts to operate on the data,
 and a folder for results. I've adopted a similar approach in Godot after
-reviewing some articles on data organization. [^1] [^2]
+reviewing some articles on data organization. [^1] [^2] [^4]
 
 - an `assets` folder will contain the 'raw'[^3] data - that includes:
   - audio files, organized into an `audio` folder
@@ -40,8 +41,7 @@ reviewing some articles on data organization. [^1] [^2]
     - `characters` contains characters
     - `levels` contains levels
     - `effects` contains effects (e.g. a reusable explosion)
-  - code lives _with_ the scene
-  -
+  - code lives _with_ the scene, except for the code that doesn't have scenes which goes into...
 
 - a `src` folder which contains auto-load scripts or scripts that are not part of scenes, e.g. resource scripts
 
@@ -84,3 +84,4 @@ you don't risk breaking things.
 
 [^1]: [How To Structure Your Godot Project (so You Don't Get Confused)](https://new.pythonforengineers.com/blog/how-to-structure-your-godot-project-so-you-dont-get-confused/), accessed 2024-06-16
 [^2]: [Project organization Official Godot Documentation for 4.2](https://docs.godotengine.org/en/stable/tutorials/best_practices/project_organization.html), accessed 2024-06-16
+[^4]: [How to structure your project (So you don't get confused) - Godot tutorial](https://www.youtube.com/watch?v=IVMTxudQi48), accessed 2024-06-22

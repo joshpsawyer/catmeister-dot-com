@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
   @include fixedsys-stack();
 
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(1,1fr);
   
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 3px dashed #000;
     text-decoration: none;
 
-    grid-column: span 3;
+    grid-column: span 1;
 
     &:hover {
       background-color: var(--color-three);
@@ -301,4 +301,10 @@ code {
 
 ol, ul {
   line-height: 1.5rem;
+}
+
+@media (min-width: 480px) {
+  #index-nav nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

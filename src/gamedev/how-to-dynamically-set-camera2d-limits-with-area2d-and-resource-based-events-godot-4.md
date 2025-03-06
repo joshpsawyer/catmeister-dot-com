@@ -1,0 +1,21 @@
+---
+title: How to Set Camera Limits Dynamically with minimal code - Resource Based Event Architecture in Godot 4, Part 3
+indexname: Good Godot Tutorials
+tags:
+    - gamedev
+    - godot
+    - event based architecture series
+seriesorder: 3
+published: 2024-06-16
+# hero: /images/food/one-two-eight-tea.png
+# heroalt: two lemons and a jar of raw clover honey
+layout: article
+---
+
+There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I've found.
+
+## Beginner
+
+## Intermediate
+
+## Advanced
