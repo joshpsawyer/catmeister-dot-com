@@ -2,7 +2,7 @@
 title: The Go To Pie Crust
 indexname: Pie Crust
 vegan: true
-tags: foods
+tags: food
 published: 2024-11-30
 # hero: /images/food/pancakes.png
 # heroalt: damn that's some nice pie crust

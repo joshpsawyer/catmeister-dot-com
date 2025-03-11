@@ -1,7 +1,7 @@
 ---
 title: Instant Pot (Pop Pop) Pot Beans 
 indexname: Beans, Pot
-tags: foods
+tags: food
 published: 2024-06-15
 hero: /images/food/instant-pot-beans.png
 heroalt: a bowl of beans with some cooking liquid on a dinosaur plate on a butcherblock island

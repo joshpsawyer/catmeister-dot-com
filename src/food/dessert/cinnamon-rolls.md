@@ -1,7 +1,7 @@
 ---
 title: Overnight Holiday Cinnamon Rolls
 indexname: Cinnamon Rolls, Overnight Holiday
-tags: foods
+tags: food
 published: 2024-06-05
 hero: /images/food/overnight-cinnamon-rolls.png
 heroalt: a photo of unfrosted cinnamon rolls - they're still good without the frosting!

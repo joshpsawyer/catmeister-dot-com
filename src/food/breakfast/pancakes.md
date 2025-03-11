@@ -1,7 +1,7 @@
 ---
 title: Great Old Fashioned Pancakes
 indexname: Pancakes, Great Old Fashioned
-tags: foods
+tags: food
 published: 2024-06-08
 hero: /images/food/pancakes.png
 heroalt: a niiiiiiiiice stack of pancakes

@@ -1,7 +1,7 @@
 ---
 title: 1-2-8 Honey Lemon Tea
 indexname: Tea, Honey Lemon
-tags: foods
+tags: food
 published: 2024-06-06
 hero: /images/food/one-two-eight-tea.png
 heroalt: two lemons and a jar of raw clover honey

@@ -1,7 +1,7 @@
 ---
 title: Vegetable Pot Pie
 indexname: Pot Pie, Vegetable
-tags: foods
+tags: food
 published: 2024-11-30
 # hero: /images/food/pancakes.png
 # heroalt: a niiiiiiiiice stack of pancakes
