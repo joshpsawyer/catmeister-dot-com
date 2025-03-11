@@ -1,0 +1,10 @@
+<ul>
+{% for ingredient in structure.contents %}
+    <li>
+        {{ ingredient.measurement | safe }}
+        {% if ingredient.measurement_alt %} ({{ ingredient.measurement_alt | safe }}){% endif %}
+        {{ ingredient.label | safe }}
+        {% if ingredient.note %}({{ ingredient.note | safe }}){% endif %}
+    </li>
+{% endfor %}
+</ul>

@@ -1,74 +1,5 @@
 {
-    "structures": [
-        {
-            "type": "ingredients",
-            "heading": "Dough",
-            "display_heading": "true",
-            "contents": [
-                {
-                    "label": "<em>milk</em>, buttermilk or milk substitute",
-                    "measurement": "1 cup",
-                    "measurement_alt": "240ml",
-                    "note": "fresh from a butt"
-                },
-                {
-                    "label": "granulated sugar",
-                    "measurement": "2/3 cup",
-                    "measurement_alt": "135g",
-                    "note": "fresh from a butt"
-                }
-            ]
-        },
-        {
-            "type": "ingredients",
-            "heading": "Filling",
-            "display_heading": "true",
-            "contents": [
-                {
-                    "label": "milk, buttermilk or milk substitute",
-                    "measurement": "1 cup",
-                    "measurement_alt": "240ml",
-                    "note": "fresh from a butt"
-                },
-                {
-                    "label": "granulated sugar",
-                    "measurement": "2/3 cup",
-                    "measurement_alt": "135g",
-                    "note": "fresh from a butt"
-                }
-            ]
-        },
-        {
-            "type": "ingredients",
-            "heading": "Icing",
-            "display_heading": "true",
-            "contents": [
-                {
-                    "label": "freshly brewed strong coffee",
-                    "measurement": "1/2 cup",
-                    "measurement_alt": "120ml"
-                },
-                {
-                    "label": "powdered sugar",
-                    "measurement": "2 cups",
-                    "measurement_alt": "230g",
-                    "note": "sifted, and possibly up to an additional cup (114g)"
-                },
-                {
-                    "label": "butter, melted",
-                    "measurement": "2 T"
-                },
-                {
-                    "label": "vanilla paste or vanilla scrapings",
-                    "measurement": "to taste"
-                }
-            ]
-        },
-    {
-        "type": "instructions",
-        "heading": "Steps",
-        "display_heading": "true",
-        "contents": [
+    "instructions": [
             {
                 "step": "mixa mixa mixa",
                 "image": "/images/food/overnight-cinnamon-rolls.png",
@@ -79,33 +10,54 @@
                 "image": "/images/food/overnight-cinnamon-rolls-2.png",
                 "imagealt": "a sliced cinnamon roll showing the layers of dough and cinnamon"
             }
-        ]
-    },
-    {
-        "type": "ordered_list",
-        "heading": "Notes",
-        "display_heading": "true",
-        "contents": [
-            "The richer the milk, the richer cinnamon rolls. There will obviously be a difference between soy and buttermilk."
-        ]
-    },
-    {
-        "type": "references",
-        "heading": "References",
-        "display_heading": "true",
-        "contents": [
-            {
-                "title": "Sally's Baking Addiction Homemade Overnight Cinnamon Rolls",
-                "url": "https://sallysbakingaddiction.com/overnight-cinnamon-rolls/",
-                "published": "12/23/2023",
-                "accessed": "2024-06-05"
-            },
-            {
-                "title": "Mrs. Enger’s Cinnamon Rolls",
-                "url": "https://www.tosasallcityread.com/wp-content/uploads/2014/01/Mrs.-Engers-Cinnamon-Rolls.pdf",
-                "accessed": "2024-06-05"
-            }
-        ]
-    }
-]
+        ],
+    "dough_ingredients": [
+        {
+            "label": "<em>milk</em>, buttermilk or milk substitute",
+            "measurement": "1 cup",
+            "measurement_alt": "240ml",
+            "note": "fresh from a butt"
+        },
+        {
+            "label": "granulated sugar",
+            "measurement": "2/3 cup",
+            "measurement_alt": "135g",
+            "note": "fresh from a butt"
+        }
+    ],
+    "filling_ingredients": [
+        {
+            "label": "milk, buttermilk or milk substitute",
+            "measurement": "1 cup",
+            "measurement_alt": "240ml",
+            "note": "fresh from a butt"
+        },
+        {
+            "label": "granulated sugar",
+            "measurement": "2/3 cup",
+            "measurement_alt": "135g",
+            "note": "fresh from a butt"
+        }
+    ],
+    "icing_ingredients": [
+        {
+            "label": "freshly brewed strong coffee",
+            "measurement": "1/2 cup",
+            "measurement_alt": "120ml"
+        },
+        {
+            "label": "powdered sugar",
+            "measurement": "2 cups",
+            "measurement_alt": "230g",
+            "note": "sifted, and possibly up to an additional cup (114g)"
+        },
+        {
+            "label": "butter, melted",
+            "measurement": "2 T"
+        },
+        {
+            "label": "vanilla paste or vanilla scrapings",
+            "measurement": "to taste"
+        }
+    ]
 }

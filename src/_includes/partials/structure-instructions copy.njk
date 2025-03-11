@@ -1,0 +1,10 @@
+<ol>
+{% for instruction in structure.contents %}
+    <li>
+        {{ instruction.step | safe }}
+        {% if instruction.image %}
+        <br/><br/><img class="recipeimage" src="{{ instruction.image }}" alt="{{ instruction.imagealt }}" />
+        {% endif %}
+    </li>
+{% endfor %}
+</ol>

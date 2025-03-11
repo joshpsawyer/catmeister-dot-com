@@ -1,0 +1,7 @@
+<ul>
+{% for ingredient in ingredients %}
+    <li>
+        {{ ingredient.measurement }} {% if ingredient.measurement_alt %} ({{ ingredient.measurement_alt }}){% endif %} {{ ingredient.label }} {% if ingredient.note %}({{ ingredient.note }}){% endif %}
+    </li>
+{% endfor %}
+</ul>

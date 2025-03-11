@@ -1,0 +1,20 @@
+{
+            "crust_ingredients": [
+                {
+                    "label": "recipe of [the go to pie crust](/food/sides-and-staples/the-go-to-pie-crust)",
+                    "measurement": "one half"
+                }
+            ],
+            "filling_ingredients": [
+                {
+                    "label": "freshly squeezed lemon juice",
+                    "measurement": "1 Tbsp",
+                    "measurement_alt": "1 part"
+                }
+            ],
+            "instructions": [
+                {
+                    "step": "Get the water hot enough to dissolve the honey. <abbr title=\"Perfect Drinking Temperature\">PDT</abbr> is about 140&deg;F and you can drink it right away."
+                }
+            ]
+        }

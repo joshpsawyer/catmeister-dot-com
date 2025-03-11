@@ -1,0 +1,7 @@
+<ol>
+{% for instruction in instructions %}
+    <li>
+        {{ instruction.step  }} {% if instruction.image %}<br/><br/><img class="recipeimage" src="{{ instruction.image }}" alt="{{ instruction.imagealt }}" />{% endif %}
+    </li>
+{% endfor %}
+</ol>

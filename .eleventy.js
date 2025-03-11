@@ -3,6 +3,8 @@ const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const markdownItAbbr = require('markdown-it-abbr');
+
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/CNAME");
@@ -42,13 +44,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setFreezeReservedData(false);
 
   
-    let markdownLibrary = markdownIt({
-      html: true,
-      // breaks: true,
-      linkify: true,
-      // typographer: true,
-    })
-      .use(markdownItFootnote);
+  let markdownLibrary = markdownIt({
+    html: true,
+    // breaks: true,
+    linkify: true,
+    // typographer: true,
+  })
+  .use(markdownItFootnote)
+  .use(markdownItAbbr);
   
    markdownLibrary.renderer.rules.footnote_block_open = () => (
     '<h2 class="mt-3">References & Notes</h4>\n' +

@@ -1,0 +1,48 @@
+{
+    "ingredients": [
+        {
+            "label": "pinto beans",
+            "measurement": "1 lb",
+            "measurement_alt": "453 grams"
+        },
+        {
+            "label": "onion, yellow or red, diced",
+            "measurement": "1/2 cup",
+            "measurement_alt": "a smallish one",
+            "note": "this can be approximate, it doesn't really matter, and it's fine to leave it out"
+        },
+        {
+            "label": "garlic",
+            "measurement": "2 cloves"
+        },
+        {
+            "label": "chicken boullion, either real or fake, or water",
+            "measurement": "6 cups"
+        },
+        {
+            "label":  "kosher salt",
+            "measurement": "1.5 teaspoons"
+        },
+        {
+            "label": "liquid smoke",
+            "measurement": "2 teaspoons"
+        }
+    ],
+    "instructions": [
+        {
+            "step": "Rinse beans. Pick out any debris."
+        },
+        {
+            "step": "Combine all ingredients in Instant Pot - yes, even the salt, that tough skin salt thing is bullshit[^3]"
+        },
+        {
+            "step": "Press 'Manual' and set for 'High Pressure' for 80 minutes. (Many recipes say about 50 minutes, but at this point you get beans that are similar to what comes from cans - if you want soupy soft beans that can be smushed onto tacos, you need more time.)"
+        },
+        {
+            "step": "Let presssure release naturally for 15 minutes (i.e. - don't vent it!) and _then_ turn the vent knob to release remaining steam."
+        },
+        {
+            "step": "At this point, season to taste. You can serve the beans by themselves or with the liquid or mash 'em up for refried beans."
+        }
+    ]
+}

@@ -8,3 +8,11 @@ heroalt: a photo of graham crackers - yum
 ---
 
 Gortimer made themselves a snack and wanted me to 'put it online for everybody to read.'
+
+## Ingredients
+
+{% include "partials/structure-ingredients-v2.njk" %}
+
+## Steps
+
+{% include "partials/structure-instructions-v2.njk" %}

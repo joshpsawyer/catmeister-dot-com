@@ -1,42 +1,31 @@
 {
-    "structures": [
+    "ingredients": [
         {
-            "type": "ingredients",
-            "heading": "Ingredients",
-            "display_heading": "true",
-            "contents": [
-                {
-                    "label": "freshly squeezed lemon juice",
-                    "measurement": "1 Tbsp",
-                    "measurement_alt": "1 part"
-                },
-                {
-                    "label": "honey",
-                    "measurement": "2 Tbsp",
-                    "measurement_alt": "2 parts",
-                    "note": "raw clover is particularly nice"
-                },
-                {
-                    "label": "water",
-                    "measurement": "1/2 cup",
-                    "measurement_alt": "8 parts"
-                }
-            ]
+            "label": "freshly squeezed lemon juice",
+            "measurement": "1 Tbsp",
+            "measurement_alt": "1 part"
         },
         {
-            "type": "instructions",
-            "heading": "Steps",
-            "display_heading": "true",
-            "contents": [
-                {
-                    "step": "Get the water hot enough to dissolve the honey. <abbr title=\"Perfect Drinking Temperature\">PDT</abbr> is about 140&deg;F and you can drink it right away."
-                },
-                {
-                    "step": "Combine all ingredients and stir until the honey is dissolved."
-                },
-                {
-                    "step": "Serve immediately to your sick family member, maybe with some of <a href=\"/food/dessert/jelly-graham-cracker-sandwich/\">Gortimer's Graham Cracker Sandwiches?</a>"
-                }
-            ]
+            "label": "honey",
+            "measurement": "2 Tbsp",
+            "measurement_alt": "2 parts",
+            "note": "raw clover is particularly nice"
+        },
+        {
+            "label": "water",
+            "measurement": "1/2 cup",
+            "measurement_alt": "8 parts"
         }
-]}
+    ],
+    "instructions": [
+        {
+            "step": "Get the water hot enough to dissolve the honey. <abbr title=\"Perfect Drinking Temperature\">PDT</abbr> is about 140&deg;F and you can drink it right away."
+        },
+        {
+            "step": "Combine all ingredients and stir until the honey is dissolved."
+        },
+        {
+            "step": "Serve immediately to your sick family member, maybe with some of <a href=\"/food/dessert/jelly-graham-cracker-sandwich/\">Gortimer's Graham Cracker Sandwiches?</a>"
+        }
+    ]
+}

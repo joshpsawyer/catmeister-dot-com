@@ -1,10 +1,5 @@
 {
-    "structures": [
-        {
-            "type": "ingredients",
-            "heading": "Ingredients",
-            "display_heading": "true",
-            "contents": [
+            "ingredients": [
                 {
                     "label": "freshly squeezed lemon juice",
                     "measurement": "1 Tbsp",
@@ -21,13 +16,8 @@
                     "measurement": "1/2 cup",
                     "measurement_alt": "8 parts"
                 }
-            ]
-        },
-        {
-            "type": "instructions",
-            "heading": "Steps",
-            "display_heading": "true",
-            "contents": [
+            ],
+            "instructions": [
                 {
                     "step": "Get the water hot enough to dissolve the honey. <abbr title=\"Perfect Drinking Temperature\">PDT</abbr> is about 140&deg;F and you can drink it right away."
                 },
@@ -38,18 +28,4 @@
                     "step": "Serve immediately to your sick family member, maybe with some of <a href=\"/food/dessert/jelly-graham-cracker-sandwich/\">Gortimer's Graham Cracker Sandwiches?</a>"
                 }
             ]
-        },
-        {
-            "type": "references",
-            "heading": "References",
-            "display_heading": "true",
-            "contents": [
-                {
-                    "title": "Good Old-Fashioned Pancakes",
-                    "url": "https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/",
-                    "published": "2022-11-29",
-                    "accessed": "2024-06-09"
-                }
-            ]
         }
-]}

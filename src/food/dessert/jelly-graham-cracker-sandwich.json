@@ -1,10 +1,5 @@
 {
-    "structures": [
-        {
-            "type": "ingredients",
-            "heading": "Ingredients",
-            "display_heading": "true",
-            "contents": [
+            "ingredients": [
                 {
                     "label": "Graham crackers",
                     "measurement": "two 4 cracker sheets",
@@ -14,13 +9,9 @@
                     "label": "Jelly, Lemon Curd, any sort of sweet spreadable filling",
                     "measurement": "2T"
                 }
-            ]
-        },
-        {
-            "type": "instructions",
-            "heading": "Steps",
-            "display_heading": "true",
-            "contents": [
+            ],
+
+        "instructions": [
                 {
                     "step": "Break the sheets in half, so they're squares comprised of two crackers."
                 },
@@ -34,5 +25,4 @@
                     "step": "Wait 10-15 minutes for some of the moisture from the jelly to get into the cracker. You don't want the cracker to be crunchy, it should have a slight resistance and be more like shortbread."
                 }
             ]
-        }
-]}
+}

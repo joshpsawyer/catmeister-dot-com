@@ -4,7 +4,6 @@ indexname: Good Godot Tutorials
 tags:
     - gamedev
     - godot
-    - event based architecture series
 seriesorder: 2
 published: 2024-06-16
 # hero: /images/food/one-two-eight-tea.png

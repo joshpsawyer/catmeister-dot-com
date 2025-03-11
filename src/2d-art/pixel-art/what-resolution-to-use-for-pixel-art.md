@@ -2,8 +2,8 @@
 title: What Resolution To Use for Pixel Art
 indexname: What Resolution To Use for Pixel Art
 tags:
-    - 2d art
-    - pixel art
+    - 2d-art
+    - pixel-art
     - gamedev
 published: 2024-06-15
 # hero: /images/food/one-two-eight-tea.png

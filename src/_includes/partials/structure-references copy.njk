@@ -1,0 +1,13 @@
+<ol>
+{% for reference in structure.contents %}
+    <li>
+        {% if reference.url %}
+        <a href="{{ reference.url}}" target="_blank">{{ reference.title}}</a>.
+        {% else %}
+        {{ reference.title}}
+        {% endif %}
+        {% if reference.published %}Published: {{ reference.published }}.{% endif %}
+        {% if reference.accessed %}Accessed: {{ reference.accessed }}.{% endif %}
+    </li>
+{% endfor %}
+</ol>
