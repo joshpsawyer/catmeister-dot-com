@@ -4,7 +4,7 @@
   <subtitle>All the game development from catmeister.com.</subtitle>
   <link href="https://www.catmeister.com/gamedev.xml" rel="self" />
   <link href="https://www.catmeister.com/" />
-  <updated>2025-03-11T13:36:14Z</updated>
+  <updated>2025-03-11T13:40:45Z</updated>
   <id>https://www.catmeister.com/</id>
   <author>
     <name>catmeister</name>
@@ -12,7 +12,7 @@
   <entry>
     <title>How I Set Up a Godot 4.2 Project for Pixel Art</title>
     <link href="https://www.catmeister.com/gamedev/how-to-set-up-godot-project-for-a-pixel-art-game/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/gamedev/how-to-set-up-godot-project-for-a-pixel-art-game/</id>
     <content type="html">&lt;p&gt;Navigate to &lt;code&gt;Project &amp;gt; Project Settings&lt;/code&gt; and then choose &lt;code&gt;Window&lt;/code&gt; under &lt;code&gt;Display&lt;/code&gt;.
 Set &lt;code&gt;Viewport Width&lt;/code&gt; to &lt;code&gt;480&lt;/code&gt; and &lt;code&gt;Viewport Height&lt;/code&gt; to 270. This is the resolution the game renders at.
@@ -33,7 +33,7 @@ some interpolated garbage.&lt;/p&gt;
   <entry>
     <title>How to Organize Your Godot Project Files</title>
     <link href="https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/gamedev/how-to-organize-your-project-files-in-godot-4/</id>
     <content type="html">&lt;h2&gt;Coming From Unity&lt;/h2&gt;
 &lt;p&gt;In Unity, I let the root project directory be a wild west of stuff because, when
@@ -122,7 +122,7 @@ insofar that you&#39;re not editing it &lt;em&gt;within&lt;/em&gt; the game engi
   <entry>
     <title>How to Set Camera Limits Dynamically with minimal code - Resource Based Event Architecture in Godot 4, Part 3</title>
     <link href="https://www.catmeister.com/gamedev/how-to-dynamically-set-camera2d-limits-with-area2d-and-resource-based-events-godot-4/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/gamedev/how-to-dynamically-set-camera2d-limits-with-area2d-and-resource-based-events-godot-4/</id>
     <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
 &lt;h2&gt;Beginner&lt;/h2&gt;
@@ -133,7 +133,7 @@ insofar that you&#39;re not editing it &lt;em&gt;within&lt;/em&gt; the game engi
   <entry>
     <title>How to Communicate between Distant Nodes - Resource Based Event Architechture in Godot 4, Part 2</title>
     <link href="https://www.catmeister.com/gamedev/how-to-communicate-between-distance-nodes-with-resource-based-events-godot-4/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/gamedev/how-to-communicate-between-distance-nodes-with-resource-based-events-godot-4/</id>
     <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
 &lt;h2&gt;Beginner&lt;/h2&gt;
@@ -144,7 +144,7 @@ insofar that you&#39;re not editing it &lt;em&gt;within&lt;/em&gt; the game engi
   <entry>
     <title>The Event Bus, Local Signaling and an Alternative - Resource Based Event Architechture in Godot 4, Part 1</title>
     <link href="https://www.catmeister.com/gamedev/an-alternative-to-the-event-bus-and-why-godot-4/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/gamedev/an-alternative-to-the-event-bus-and-why-godot-4/</id>
     <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
 &lt;h2&gt;Beginner&lt;/h2&gt;
@@ -155,7 +155,7 @@ insofar that you&#39;re not editing it &lt;em&gt;within&lt;/em&gt; the game engi
   <entry>
     <title>All The Good Godot Tutorials that I could Find</title>
     <link href="https://www.catmeister.com/gamedev/all-the-good-godot-tutorials-that-i-could-find/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/gamedev/all-the-good-godot-tutorials-that-i-could-find/</id>
     <content type="html">&lt;p&gt;There are a ton of Godot tutorials online, and not all of them are good. Here are the best ones I&#39;ve found.&lt;/p&gt;
 &lt;h2&gt;Beginner&lt;/h2&gt;
@@ -166,7 +166,7 @@ insofar that you&#39;re not editing it &lt;em&gt;within&lt;/em&gt; the game engi
   <entry>
     <title>What Resolution To Use for Pixel Art</title>
     <link href="https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/" />
-    <updated>2025-03-11T13:36:14Z</updated>
+    <updated>2025-03-11T13:40:45Z</updated>
     <id>https://www.catmeister.com/2d-art/pixel-art/what-resolution-to-use-for-pixel-art/</id>
     <content type="html">&lt;p&gt;I&#39;m by no means an expert, but here are the considerations I made when choosing what
 resolution to work with.&lt;/p&gt;
